@@ -62,7 +62,7 @@ update msg model =
 view : Model -> Html Msg
 view model =
   div
-    [ class "min-h-screen flex justify-center items-center bg-pink-100 p-4" ]
+    [ class "min-h-screen flex justify-center items-center bg-green-100 p-4" ]
     [
       Html.form
         [ 
@@ -83,7 +83,7 @@ view model =
                   , preventDefault = True
                 }
             )
-          , class "flex flex-col items-center py-10 px-12 bg-pink-900 shadow-lg rounded-lg text-pink-100 w-full md:w-1/2 max-w-screen-sm"
+          , class "flex flex-col items-center py-10 px-12 bg-green-700 shadow-lg rounded-lg text-green-100 w-full md:w-1/2 max-w-screen-sm"
         ]
         (
           (
@@ -104,8 +104,8 @@ view model =
             button
               [
                 type_ "submit"
-                , class "mt-12 bg-pink-500 text-pink-900 px-12 py-2 shadow-md rounded-sm hover:bg-pink-400 transition-colors duration-200"
-              ] [ text "次へ" ]
+                , class "mt-12 bg-green-500 text-green-900 px-10 py-2 shadow-md rounded-sm hover:bg-green-400 transition-colors duration-200"
+              ] [ text "次へ →" ]
           ]
         )
     ]
@@ -114,10 +114,10 @@ formInput : String -> String -> (String -> msg) -> List String -> Html msg
 formInput l v toMsg classes =
   label [ class ([ "flex", "items-center", "w-full" ] ++ classes |> String.join (String.fromChar ' ')) ]
   [
-    span [ class "w-24 text-sm text-right text-pink-300" ] [ text l ]
+    span [ class "w-24 text-sm text-right text-green-300" ] [ text l ]
     , input
       [
-        class "flex-grow bg-transparent border-b-2 border-pink-300 py-1 focus:outline-none focus:border-pink-100 transition-colors duration-200 ml-2 tracking-wider"
+        class "flex-grow bg-transparent border-b-2 border-green-300 py-1 focus:outline-none focus:border-green-100 transition-colors duration-200 ml-2 tracking-wider"
         , value v
         , onInput toMsg
       ] []
