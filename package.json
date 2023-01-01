@@ -6,7 +6,7 @@
     "autoprefixer": "^9.7.4",
     "elm-hot": "^1.1.4",
     "node-elm-compiler": "^5.0.4",
-    "postcss-modules": "^1.5.0",
+    "postcss-modules": "^6.0.0",
     "tailwindcss": "^1.2.0"
   }
 }
